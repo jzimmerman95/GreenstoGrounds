@@ -1,0 +1,119 @@
+@font-face {
+    font-family: GothamBook;
+    src: url(GothamBook.otf);
+}
+
+body {
+    font-family: GothamBook;
+}
+
+
+/*****************************************
+			   NAVIGATION
+*****************************************/
+.navbar {
+	width: 100%;
+    height: 50px;
+    position: absolute;
+    z-index: 100;
+
+    ul {
+        list-style-type: none;
+
+        li {
+            display: inline-block;
+            padding: 20px;
+            text-shadow: 2px 2px 2px #000000;
+            font-size: 1.2em;
+
+            a {
+                color: white;
+                text-decoration: none;
+                
+                &:hover {
+                    color: #c9fe65;
+                }
+            }
+        }
+
+        #vertical-bar {
+            font-size: 1.4em;
+            color: white;
+            text-shadow: 2px 2px #000000;
+        }
+    }
+}
+
+
+.home-background-img {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/assets/home.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    .g2g-logo {
+        padding: 250px 0px 0px 80px;
+    }
+}
+
+.our-mission-container {
+    width: 100%;
+    height: 375px;
+    background-color: #ebebeb;
+
+    .our-mission-header {
+        font-size: 2em;
+        padding-top: 40px;
+        padding-left: 70px;
+    }
+
+    .our-mission-body {
+        font-size: 1.2em;
+        width: 800px;
+        padding-left: 70px;
+        padding-top: 40px;
+    }
+}
+
+.box-example-container {
+    width: 100%;
+    height: 550px;
+
+    .box-example-header {
+        font-size: 2em;
+        float: right;
+        padding-right: 150px;
+        padding-top: 40px;
+    }
+
+    .box-example-pic {
+        padding-top: 100px;
+        padding-left: 100px;
+    }
+}
+
+.get-started-container {
+    width: 100%;
+    height: 400px;
+    background-color: #ebebeb;
+
+    .get-started-header {
+        font-size: 2em;
+        padding-top: 40px;
+        padding-left: 70px;
+    }
+
+    .get-started-body {
+        font-size: 1.2em;
+        padding-top: 40px;
+        padding-left: 70px;
+        width: 700px;
+    }
+}
+
+
+

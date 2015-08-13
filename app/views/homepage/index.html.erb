@@ -2,16 +2,16 @@
 <div class="container">
 	<nav class="navbar">
 		<ul>
-			<li><a href="">order</a></li>
-			<li><a href="">box examples</a></li>
-			<li><a href="">faq</a></li>
-			<li><a href="">blog</a></li>
-			<li><a href="">contact</a></li>
+			<li><a href="">order</a></li><span id="vertical-bar">|</span>
+			<li><a href="">box examples</a></li><span id="vertical-bar">|</span>
+			<li><a href="">faq</a></li><span id="vertical-bar">|</span>
+			<li><a href="">blog</a></li><span id="vertical-bar">|</span>
+			<li><a href="">contact</a></li><span id="vertical-bar">|</span>
 			<li><a href="">press</a></li>
 		</ul>
 	</nav>
 	<div class="home-background-img">
-		<div class="g2g-logo"></div>
+		<div class="g2g-logo"><%= image_tag("g2glogo.png", width: '550px', height: '400px') %></div>
 		<div class="arrow"></div>
 	</div>
 	<div class="our-mission-container">
@@ -21,7 +21,7 @@
 	</div>
 	<div class="box-example-container">
 		<div class="box-example-header">box example</div>
-		<div class="box-example-pic"></div>
+		<div class="box-example-pic"><%= image_tag("boxexample1.jpg", width: '550px', height: '400px') %></div>
 		<div class="box-example-bullets"></div>
 	</div>
 	<div class="get-started-container">
