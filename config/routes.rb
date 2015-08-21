@@ -7,6 +7,22 @@ Rails.application.routes.draw do
 
   root 'homepage#index'
 
+  #ordering
+  get 'order' => 'order#index'
+
+  #box examples
+  get 'examples' => 'examples#index'
+
+  #faq page
+  get 'faq' => 'faq#index'
+
+  #press kit page
+  get 'press' => 'press#index'
+
+  #contact information
+  get 'contact' => 'contact#index'
+
+  get 'blog' => 'blog#index'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
