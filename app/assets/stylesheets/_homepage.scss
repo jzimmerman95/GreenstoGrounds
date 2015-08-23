@@ -77,15 +77,12 @@ body {
 
     .our-mission-body {
         font-size: 1.2em;
-        width: 800px;
-        padding-left: 70px;
-        padding-top: 40px;
+        padding: 40px 70px 0 70px;
         display: inline-block;
     }
 
     .our-mission-logo {
-        display: inline-block;
-        padding-left: 150px;
+        padding-top: 80px;
     }
 }
 
@@ -95,24 +92,20 @@ body {
 
     .box-example-header {
         font-size: 2em;
-        float: right;
-        padding-right: 150px;
-        padding-top: 40px;
+        padding: 40px 0 0 300px;
     }
 
     .box-example-pic {
         padding-top: 100px;
         padding-left: 100px;
-        display: inline-block;
     }
 
     .box-example-bullets {
-        float: right;
-        padding-left: 100px;
-        display: inline-block;
+        padding-top: 50px;
+        padding-left: 50px;
 
         #left-list {
-            padding-right: 50px;
+            padding-right: 100px;
             display: inline-block;
 
             li {
@@ -123,6 +116,7 @@ body {
 
         #right-list {
             display: inline-block;
+
             li {
                 font-size: 1.2em;
                 padding: 15px 0px;
@@ -133,7 +127,7 @@ body {
 
 .get-started-container {
     width: 100%;
-    height: 400px;
+    height: 350px;
     background-color: #ebebeb;
 
     .get-started-header {
@@ -146,7 +140,16 @@ body {
         font-size: 1.2em;
         padding-top: 40px;
         padding-left: 70px;
-        width: 700px;
+        max-width: 700px;
+    }
+
+    .get-started-btn {
+        padding-top: 50px;
+        padding-left: 70px;
+    }
+
+    .get-started-logo {
+        padding-top: 70px;
     }
 }
 
