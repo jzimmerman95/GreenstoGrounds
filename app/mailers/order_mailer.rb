@@ -3,7 +3,7 @@ class OrderMailer < ActionMailer::Base
 
 	def order_submitted_email(order)
 		@order = order
-		mail(to: "jessicazimmerman95@gmail.com", subject: "Order Submitted")
+		mail(to: "gabecorso@aol.com", subject: "Order Submitted")
 	end
 
 
