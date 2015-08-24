@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
+  resources :order, :only => [:create, :new]
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   #ordering
   get 'order' => 'order#index'
-
+  
   #box examples
   get 'examples' => 'examples#index'
 
