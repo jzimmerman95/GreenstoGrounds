@@ -1,0 +1,66 @@
+.order-header-container {
+	height: 400px;
+
+	.order-logo {
+		width: 157px;
+		margin: 0 auto;
+		padding-top: 100px;
+	}
+
+	.order-header {
+		font-size: 2em;
+		text-align: center;
+		padding-top: 20px;
+	}
+}
+
+.order-form-container {
+	height: 1500px;
+	background-color: #ebebeb;
+
+	.order-form-content-container {
+		width: 85%;
+		margin: 0 auto;
+
+		.order-form-header {
+			font-size: 1.4em;
+			padding-top: 50px;
+		}
+
+		.order-form {
+			padding-top: 20px;
+
+			input[type="text"] {
+				width: 300px;
+				height: 30px;
+			}
+
+			.produce-box-text {
+				width: 300px;
+			}
+
+			.produce-box-header {
+				font-size: 1.1em;
+				display: inline-block;
+				padding-left: 10px;
+			}
+
+			.produce-box-body {
+				display: inline-block;
+				max-width: 450px;
+			}
+
+			.items {
+				font-size: 1.1em;
+				display: inline-block;
+				padding-left: 10px;
+			}
+
+			textarea {
+				width: 500px;
+				height: 200px;
+				resize: none;
+			}
+		}
+	}
+}
