@@ -1,0 +1,16 @@
+.questions-container {
+	width: 100%;
+	height: 100%;
+	background-color: #ebebeb;
+	padding-bottom: 50px;
+
+	.question {
+		font-size: 1.4em;
+		font-weight: bold;
+		padding: 50px 70px 0 70px;
+	}
+
+	.answer {
+		padding: 15px 150px 0 70px;
+	}
+}
