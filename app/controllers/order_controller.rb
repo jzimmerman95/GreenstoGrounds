@@ -56,7 +56,12 @@ class OrderController < ApplicationController
 		#redirect for payment and total the price
 		if @order.save
 			@order.total_price
-			redirect_to @order.paypal_url(order_path(@order))
+			if @order.total < 1
+				redirect_to order_complete_path
+			
+			else 
+				redirect_to @order.paypal_url(order_path(@order))
+			end
 		end
 	end
 	def show
@@ -64,6 +69,8 @@ class OrderController < ApplicationController
 	def edit
 	end
 	def new
+	end
+	def complete
 	end
 
 private 
