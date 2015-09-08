@@ -31,18 +31,18 @@
 			  <br>
 			  <div class="row">
 			  	<div class="four columns">
-				  <input type="checkbox" name="sweets" value="sweets"><div class="produce-box-header">"End-of-Summer Sweets" ($5)</div><div class="produce-box-body">Watermelon, Yellow Peaches (Saunders Brothers Orchard)</div>
+				  <input type="checkbox" name="sweets" value="End of Summer Sweets"><div class="produce-box-header">"End-of-Summer Sweets" ($5)</div><div class="produce-box-body">Watermelon, Yellow Peaches (Saunders Brothers Orchard)</div>
 				  <br>
-				  <input type="checkbox" name="meats" value="meats"><div class="produce-box-header">"Meat Lovers" ($9)</div>
+				  <input type="checkbox" name="meats" value="Meat Lovers"><div class="produce-box-header">"Meat Lovers" ($9)</div>
 				  <div class="produce-box-body">Sweet Italian Sausage (The Rock Barn)</div>
 				  <br>
 				</div>
 				<div class="four columns">
-				  <input type="checkbox" name="csnacks" value="csnacks"><div class="produce-box-header">“Classic Snacks” ($5)</div><div class="produce-box-body">Granola (Shady Lane), Wildflower Honey (Hungry Hill Farm)</div>
+				  <input type="checkbox" name="csnacks" value="Classic Snacks"><div class="produce-box-header">“Classic Snacks” ($5)</div><div class="produce-box-body">Granola (Shady Lane), Wildflower Honey (Hungry Hill Farm)</div>
 				  <br>
 				</div>
 				<div class="four columns">
-				  <input type="checkbox" name="extra" value="extra"><div class="produce-box-header">“Extra Greens” ($5)</div><div class="produce-box-body">Red Leaf Lettuce, Romaine Lettuce, Basil</div>
+				  <input type="checkbox" name="extra" value="Extra Greens"><div class="produce-box-header">“Extra Greens” ($5)</div><div class="produce-box-body">Red Leaf Lettuce, Romaine Lettuce, Basil</div>
 				  <br>
 				</div>
 			  </div>
@@ -54,7 +54,7 @@
 			  <input type="text" name="discount_code">
 			  <div class="order-form-header">Questions?</div>
 			  <br>
-			  <div class="order-form-questions">If you have any questions about your order, please feel free to contact us at <strong>greenstogrounds@gmail.com</strong></div>
+			  <div class="order-form-questions">If you have any questions about your order, please feel free to contact us at <strong><%= mail_to "greenstogrounds@gmail.com", "greenstogrounds@gmail.com"%></strong></div>
 			  <br><br>
 			  <input type="image" value="Submit" src="/assets/submit.png">
 			</form>

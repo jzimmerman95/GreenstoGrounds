@@ -13,7 +13,7 @@ class Order < ActiveRecord::Base
 			amount: self.total,
 
 			#concatenate order options
-			item_name: "Your GreensToGrounds Order",
+			item_name: "Produce Boxes: #{self.produce}, Snack Boxes: #{self.snack}, A La Carte: #{self.alacarte}",
 			
 			quantity: '1',
 			notify_url: "#{Rails.application.secrets.app_host}/hook"
