@@ -1,63 +1,56 @@
 <div class="order-form-container">
-		<div class="order-form-content-container">
-			<div class="order-form-header">Contact info:</div>
-			
-
-			<!-- Form Start-->
-			<form action="/emailroute" class="order-form">
-			<%= form_for(@order, url: new_order_path(@order), :html => { :multipart => true }) do |f| %>
-
-			  <input type="text" name="name" placeholder="full name">
-			  
-
+	<div class="order-form-content-container">
+		<div class="order-form-header">Contact info:</div>
+		<form action="/order" class="order-form" method="post">
+		  <input type="text" name="name" placeholder="full name"><br>
+		  <input type="text" name="email" placeholder="email"><br>
+		  <input type="text" name="phone" placeholder="phone number"><br>
+		  <div class="order-form-header">Select your box:</div>
+		  <br>
+		  <div class="row">
+		  	<div class="six columns">
+			  <input type="checkbox" name="produce_box" value="produce">
+			  		<div class="produce-box-header">produce box $10</div><br>
+			  		<div class="produce-box-body">Yellow Peaches (Saunders Brothers Orchard), Red Peppers, Yellow Squash, Red Leaf Lettuce, Basil (UVA Community Garden)</div>
 			  <br>
-			  <input type="text" name="email" placeholder="email"><br>
-			  <input type="text" name="phone" placeholder="phone number"><br>
-			  <div class="order-form-header">Select your box:</div>
+			</div>
+			<div class="six columns">
+			  <input type="checkbox" name="snack_box" value="snack">
+			  		<div class="produce-box-header">snack box $10</div><br>
+			  		<div class="produce-box-body">Apple cider donuts (Carpe Doughnut), Granola (Shady Lane Farm), Asian Pears (Saunders Brothers Orchard), Concord Table Grapes</div>
 			  <br>
-			  <div class="row">
-			  	<div class="six columns">
-				  <input type="checkbox" name="produce box" value="produce">
-				  
-				  		<div class="produce-box-header">produce box $10</div><br>
-				  		<div class="produce-box-body">Yellow Peaches (Saunders Brothers Orchard), Red Peppers, Yellow Squash, Red Leaf Lettuce, Basil (UVA Community Garden)</div>
-				  <br>
-				</div>
-				<div class="six columns">
-				  <input type="checkbox" name="snack box" value="snack">
-				  		<div class="produce-box-header">snack box $10</div><br>
-				  		<div class="produce-box-body">Apple cider donuts (Carpe Doughnut), Granola (Shady Lane Farm), Asian Pears (Saunders Brothers Orchard), Concord Table Grapes</div>
-				  <br>
-				</div>
-			  </div>
-			  <div class="order-form-header">Add items a la carte:</div>
+			</div>
+		  </div>
+		  <div class="order-form-header">Add items a la carte:</div>
+		  <br>
+		  <div class="row">
+		  	<div class="four columns">
+			  <input type="checkbox" name="sweets" value="End of Summer Sweets"><div class="produce-box-header">"End-of-Summer Sweets" ($5)</div><div class="produce-box-body">Watermelon, Yellow Peaches (Saunders Brothers Orchard)</div>
 			  <br>
-			  <div class="row">
-			  	<div class="four columns">
-				  <input type="checkbox" name="bananas" value="bananas"><div class="produce-box-header">"End-of-Summer Sweets" ($5)</div><div class="produce-box-body">Watermelon, Yellow Peaches (Saunders Brothers Orchard)</div>
-				  <input type="checkbox" name="strawberries" value="strawberries"><div class="produce-box-header">"Meat Lovers" ($9)</div>
-				  <div class="produce-box-body">Sweet Italian Sausage (The Rock Barn)</div>
-				</div>
-				<div class="four columns">
-				  <input type="checkbox" name="coffee_beans" value="coffee beans"><div class="produce-box-header">“Classic Snacks” ($5)</div><div class="produce-box-body">Granola (Shady Lane), Wildflower Honey (Hungry Hill Farm)</div>
-				</div>
-				<div class="four columns">
-				  <input type="checkbox" name="kale" value="kale"><div class="produce-box-header">“Extra Greens” ($5)</div><div class="produce-box-body">Red Leaf Lettuce, Romaine Lettuce, Basil</div>
-				</div>
-			  </div>
-			  <div class="order-form-header">Comments:</div>
+			  <input type="checkbox" name="meats" value="Meat Lovers"><div class="produce-box-header">"Meat Lovers" ($9)</div>
+			  <div class="produce-box-body">Sweet Italian Sausage (The Rock Barn)</div>
 			  <br>
-			  please specify any dietary restrictions so we may accomodate you<br><textarea></textarea>
-			  <div class="order-form-header">Discount code:</div>
+			</div>
+			<div class="four columns">
+			  <input type="checkbox" name="csnacks" value="Classic Snacks"><div class="produce-box-header">“Classic Snacks” ($5)</div><div class="produce-box-body">Granola (Shady Lane), Wildflower Honey (Hungry Hill Farm)</div>
 			  <br>
-			  <input type="text" name="discount code">
-			  <div class="order-form-header">Questions?</div>
+			</div>
+			<div class="four columns">
+			  <input type="checkbox" name="extra" value="Extra Greens"><div class="produce-box-header">“Extra Greens” ($5)</div><div class="produce-box-body">Red Leaf Lettuce, Romaine Lettuce, Basil</div>
 			  <br>
-			  <div class="order-form-questions">If you have any questions about your order, please feel free to contact us at <strong>greenstogrounds@gmail.com</strong></div>
-			  <br><br>
-			  <input type="image" value="Submit" src="/assets/submit.png">
-			<% end %>
-			</form>
-
-		</div>
+			</div>
+		  </div>
+		  <div class="order-form-header">Comments:</div>
+		  <br>
+		  please specify any dietary restrictions so we may accomodate you<br><textarea></textarea>
+		  <div class="order-form-header">Discount code:</div>
+		  <br>
+		  <input type="text" name="discount_code">
+		  <div class="order-form-header">Questions?</div>
+		  <br>
+		  <div class="order-form-questions">If you have any questions about your order, please feel free to contact us at <strong><%= mail_to "greenstogrounds@gmail.com", "greenstogrounds@gmail.com"%></strong></div>
+		  <br><br>
+		  <input type="image" value="Submit" src="/assets/submit.png">
+		</form>
 	</div>
+</div>

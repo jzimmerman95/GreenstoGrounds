@@ -1,5 +1,6 @@
 class Order < ActiveRecord::Base
 	#after_create :send_order_create_email
+
 	total = 0
 	def paypal_url(return_path)
 		values = {
