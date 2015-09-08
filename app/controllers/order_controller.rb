@@ -1,4 +1,5 @@
 class OrderController < ApplicationController
+	skip_before_filter  :verify_authenticity_token
 	before_action :set_order, only: [:show, :edit, :update, :destroy]
 	def index
 		@order = Order.new
@@ -26,50 +27,35 @@ class OrderController < ApplicationController
 
 		#check for a la carte options
 		@order.alacarte = ""
-		if params[:oranges]
-			@order.alacarte += params[:oranges]
+		
+		if params[:extra]
+			@order.alacarte += params[:extra]
 			@order.alacarte += ","
 		end	
-		if params[:strawberries]
-			@order.alacarte += params[:strawberries]
+		
+		if params[:csnacks]
+			@order.alacarte += params[:csnacks]
 			@order.alacarte += ","
 		end	
-		if params[:bananas]
-			@order.alacarte += params[:bananas]
+		if params[:meats]
+			@order.alacarte += params[:meats]
 			@order.alacarte += ","
 		end	
-		if params[:coffee_beans]
-			@order.alacarte += params[:coffee_beans]
+		
+		if params[:sweets]
+			@order.alacarte += params[:sweets]
 			@order.alacarte += ","
 		end	
-		if params[:pretzels]
-			@order.alacarte += params[:pretzels]
-			@order.alacarte += ","
-		end	
-		if params[:almonds]
-			@order.alacarte += params[:almonds]
-			@order.alacarte += ","
-		end	
-		if params[:kale]
-			@order.alacarte += params[:kale]
-			@order.alacarte += ","
-		end	
-		if params[:peanut_butter]
-			@order.alacarte += params[:peanut_butter]
-			@order.alacarte += ","
-		end	
-		if params[:tomatoes]
-			@order.alacarte += params[:tomatoes]
-			@order.alacarte += ","
-		end
+		
 		
 		#add comments and discount
 		@order.comments = params[:comments]
 		@order.code = params[:discount_code]
 
 
-		#redirect for payment
+		#redirect for payment and total the price
 		if @order.save
+			@order.total_price
 			redirect_to @order.paypal_url(order_path(@order))
 		end
 	end
