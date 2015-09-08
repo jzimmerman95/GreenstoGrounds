@@ -4,10 +4,11 @@ class Order < ActiveRecord::Base
 	total = 0
 	def paypal_url(return_path)
 		values = {
-			business: "greenstogrounds@gmail.com",
+			business: "greenstogrounds-facilitator@gmail.com",
 			cmd: "_xclick",
 			upload: 1,
-			return: "#{Rails.application.secrets.app_host}#{return_path}",
+			#return: "#{Rails.application.secrets.app_host}#{return_path}",
+			return: "greenstogrounds.herokuapp.com",
 			invoice: id,
 
 			#calculate total price in dollars
