@@ -1,5 +1,9 @@
 class Order < ActiveRecord::Base
+<<<<<<< HEAD
 	after_create :send_order_create_email
+=======
+	#after_create :send_order_create_email
+>>>>>>> 51517ef292a133b70b776ee2bf96931b559dba26
 	total = 0
 	def paypal_url(return_path)
 		values = {
@@ -13,7 +17,11 @@ class Order < ActiveRecord::Base
 			amount: self.total,
 
 			#concatenate order options
+<<<<<<< HEAD
 			item_name: "Your GreensToGrounds Order",
+=======
+			item_name: "Produce Boxes: #{self.produce}, Snack Boxes: #{self.snack}, A La Carte: #{self.alacarte}",
+>>>>>>> 51517ef292a133b70b776ee2bf96931b559dba26
 			
 			quantity: '1',
 			notify_url: "#{Rails.application.secrets.app_host}/hook"
