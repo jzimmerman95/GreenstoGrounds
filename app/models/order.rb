@@ -38,16 +38,16 @@ class Order < ActiveRecord::Base
 			self.total += 10
 		end
 
-		if self.alacarte.include? "meats"
+		if self.alacarte.include? "Meat Lovers"
 			self.total += 9
 		end
-		if self.alacarte.include? "csnacks"
+		if self.alacarte.include? "Classic Snacks"
 			self.total += 5
 		end
-		if self.alacarte.include? "sweets"
+		if self.alacarte.include? "End of Summer Sweets"
 			self.total += 5
 		end
-		if self.alacarte.include? "extra"
+		if self.alacarte.include? "Extra Greens"
 			self.total += 5
 		end
 		#check alacarte items
