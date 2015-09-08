@@ -1,0 +1,61 @@
+.footer-container {
+	width: 100%;
+}
+
+.footer-info-section {
+	width: 100%;
+	height: 250px;
+	background-color: #262626;
+
+	.footer-row {
+		width: 85%;
+		margin: 0 auto;
+		padding-top: 40px;
+	
+		.footer-contact-col {
+			color: white;
+			display: inline-block;
+			width: 40%;
+
+			p {
+				width: 80%;
+			}
+		}
+
+		.footer-social-media {
+			color: white;
+			display: inline-block;
+			vertical-align: top;
+			width: 29%;
+
+			.footer-social-media-logos {
+				img {
+					width: 40px;
+					padding-right: 15px;
+				}
+			}
+		}
+
+		.footer-subscribe {
+			color: white;
+			display: inline-block;
+			vertical-align: top;
+			width: 29%;
+		}	
+
+	}
+
+}
+
+.footer-jubil-section {
+	width: 100vw;
+	height: 50px;
+	background-color: #b1da60;
+	padding-top: 20px;
+
+	p {
+		width: 400px;
+		margin: 0 auto;
+	}
+}
+

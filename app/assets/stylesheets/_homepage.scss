@@ -1,0 +1,161 @@
+@font-face {
+    font-family: GothamBook;
+    src: url(GothamBook.otf);
+}
+
+body {
+    font-family: GothamBook;
+}
+
+
+/*****************************************
+			   NAVIGATION
+*****************************************/
+.navbar {
+    height: 50px;
+    position: absolute;
+    z-index: 100;
+    padding-left: 30px;
+
+    ul {
+        list-style-type: none;
+
+        li {
+            display: inline-block;
+            padding: 20px;
+            text-shadow: 2px 2px 2px #000000;
+            font-size: 1.1em;
+
+            a {
+                color: white;
+                text-decoration: none;
+                
+                &:hover {
+                    color: #c9fe65;
+                }
+            }
+
+            a.current {
+                color: #c9fe65;
+            }
+        }
+
+        #vertical-bar {
+            font-size: 1.4em;
+            color: white;
+            text-shadow: 2px 2px #000000;
+        }
+    }
+}
+
+
+.home-background-img {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/assets/home.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    .g2g-logo {
+        padding: 220px 0px 0px 80px;
+    }
+
+    .arrow {
+        padding: 20px 0px 0px 325px;
+    }
+}
+
+.our-mission-container {
+    width: 100%;
+    height: 375px;
+    background-color: #ebebeb;
+
+    .our-mission-header {
+        font-size: 2em;
+        padding-top: 40px;
+        padding-left: 70px;
+    }
+
+    .our-mission-body {
+        font-size: 1.2em;
+        padding: 40px 70px 0 70px;
+        display: inline-block;
+    }
+
+    .our-mission-logo {
+        padding-top: 80px;
+    }
+}
+
+.box-example-container {
+    width: 100%;
+    height: 550px;
+
+    .box-example-header {
+        font-size: 2em;
+        padding: 40px 0 0 300px;
+    }
+
+    .box-example-pic {
+        padding-top: 100px;
+        padding-left: 100px;
+    }
+
+    .box-example-bullets {
+        padding-top: 50px;
+        padding-left: 50px;
+
+        #left-list {
+            padding-right: 100px;
+            display: inline-block;
+
+            li {
+                font-size: 1.2em;
+                padding: 15px 0px;    
+            }
+        }
+
+        #right-list {
+            display: inline-block;
+
+            li {
+                font-size: 1.2em;
+                padding: 15px 0px;
+            }
+        }
+    }
+}
+
+.get-started-container {
+    width: 100%;
+    height: 350px;
+    background-color: #ebebeb;
+
+    .get-started-header {
+        font-size: 2em;
+        padding-top: 40px;
+        padding-left: 70px;
+    }
+
+    .get-started-body {
+        font-size: 1.2em;
+        padding-top: 40px;
+        padding-left: 70px;
+        max-width: 700px;
+    }
+
+    .get-started-btn {
+        padding-top: 50px;
+        padding-left: 70px;
+    }
+
+    .get-started-logo {
+        padding-top: 70px;
+    }
+}
+
+
+
