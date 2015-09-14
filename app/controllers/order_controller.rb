@@ -28,25 +28,33 @@ class OrderController < ApplicationController
 		#check for a la carte options
 		@order.alacarte = ""
 		
-		if params[:extra]
-			@order.alacarte += params[:extra]
+		if params[:ad1]
+			@order.alacarte += params[:ad1]
 			@order.alacarte += ","
 		end	
 		
-		if params[:csnacks]
-			@order.alacarte += params[:csnacks]
+		if params[:ad2]
+			@order.alacarte += params[:ad2]
 			@order.alacarte += ","
 		end	
-		if params[:meats]
-			@order.alacarte += params[:meats]
-			@order.alacarte += ","
-		end	
-		
-		if params[:sweets]
-			@order.alacarte += params[:sweets]
+		if params[:ad3]
+			@order.alacarte += params[:ad3]
 			@order.alacarte += ","
 		end	
 		
+		if params[:ad4]
+			@order.alacarte += params[:ad4]
+			@order.alacarte += ","
+		end	
+		
+		if params[:ad5]
+			@order.alacarte += params[:ad5]
+			@order.alacarte += ","
+		end	
+		if params[:ad6]
+			@order.alacarte += params[:ad6]
+			@order.alacarte += ","
+		end	
 		
 		#add comments and discount
 		@order.comments = params[:comments]
