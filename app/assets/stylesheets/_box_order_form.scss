@@ -59,7 +59,8 @@
 			}
 
 			textarea {
-				width: 500px;
+				max-width: 500px;
+				min-width: 300px;
 				height: 200px;
 				resize: none;
 			}

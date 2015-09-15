@@ -1,77 +1,7 @@
 <div class="container">
+
 	<%= render "layouts/nav" %>
-
-
-
 		
-<div class="order-header-container">
-<div class="order-logo"><%= image_tag("orderlogo.png") %></div>
-<div class="order-header">box order form</div>
-</div>
-<div class="order-form-container">
-<div class="order-form-content-container">
-<div class="order-form-header">Contact info:</div>
-<form action="/order" class="order-form" method="post">
- <input type="text" name="name" placeholder="full name"><br>
- <input type="text" name="email" placeholder="email"><br>
- <input type="text" name="phone" placeholder="phone number"><br>
- <div class="order-form-header">Select your box:</div>
- <br>
- <div class="row">
- 	<div class="six columns">
- <input type="checkbox" name="produce_box" value="produce">
- 	<div class="produce-box-header">produce box $10</div><br>
- 	<div class="produce-box-body">Peaches, Red Peppers, Mixed Cherry Tomatoes, Red Leaf Lettuce, Basil</div>
- <br>
-</div>
-<div class="six columns">
- <input type="checkbox" name="snack_box" value="snack">
- 	<div class="produce-box-header">snack box $10</div><br>
- 	<div class="produce-box-body">Mixed Cherry Tomatoes, Peaches, Granola, Niagara Grapes</div>
- <br>
-</div>
- </div>
- <div class="order-form-header">Add items a la carte:</div>
- <br>
- <div class="row">
- 	<div class="four columns">
- <input type="checkbox" name="ad1" value="Peaches"><div class="produce-box-header">"Add-On 1" ($5)</div><br><div class="produce-box-body">5 Saunders Brothers Orchards Peaches</div>
- <br>
- <input type="checkbox" name="ad2" value="Doughnuts"><div class="produce-box-header">"Add-On 2" ($5)</div><br>
- <div class="produce-box-body">6 Carpe Doughnut Apple Cider Doughnuts</div>
- <br>
-</div>
-<div class="four columns">
- <input type="checkbox" name="ad3" value="Granola"><div class="produce-box-header">"Add-On 3" ($4)</div><br><div class="produce-box-body">	Savory and Healthy Granola (Shady Lane)        </div>
- <br>
-</div>
-<div class="four columns">
- <input type="checkbox" name="ad4" value="Tomatoes"><div class="produce-box-header">"Add-On 4" ($5)</div><br><div class="produce-box-body">Heirloom Tomatoes</div>
- <br>
-</div>
-<div class="four columns">
- <input type="checkbox" name="ad5" value="Basil"><div class="produce-box-header">"Add-On 5" ($1)</div><br><div class="produce-box-body">One fresh bunch of Basil</div>
- <br>
-</div>
-<div class="four columns">
- <input type="checkbox" name="ad6" value="Chorizo"><div class="produce-box-header">"Add-On 6" ($6)</div><br><div class="produce-box-body">1lb of Chorizo</div>
- <br>
-</div>
- </div>
- <div class="order-form-header">Comments:</div>
- <br>
- please specify any dietary restrictions so we may accomodate you<br><textarea></textarea>
- <div class="order-form-header">Discount code:</div>
- <br>
- <input type="text" name="discount_code">
- <div class="order-form-header">Questions?</div>
- <br>
- <div class="order-form-questions">If you have any questions about your order, please feel free to contact us at <strong><%= mail_to "greenstogrounds@gmail.com", "greenstogrounds@gmail.com"%></strong></div>
- <br><br>
- <input type="image" value="Submit" src="/assets/submit.png">
-</form>
-</div>
-</div> 
-	</div>
+	<%= render "order/form" %>
 	
 </div>
