@@ -28,25 +28,33 @@ class OrderController < ApplicationController
 		#check for a la carte options
 		@order.alacarte = ""
 		
-		if params[:extra]
-			@order.alacarte += params[:extra]
+		if params[:ad1]
+			@order.alacarte += params[:ad1]
 			@order.alacarte += ","
 		end	
 		
-		if params[:csnacks]
-			@order.alacarte += params[:csnacks]
+		if params[:ad2]
+			@order.alacarte += params[:ad2]
 			@order.alacarte += ","
 		end	
-		if params[:meats]
-			@order.alacarte += params[:meats]
-			@order.alacarte += ","
-		end	
-		
-		if params[:sweets]
-			@order.alacarte += params[:sweets]
+		if params[:ad3]
+			@order.alacarte += params[:ad3]
 			@order.alacarte += ","
 		end	
 		
+		if params[:ad4]
+			@order.alacarte += params[:ad4]
+			@order.alacarte += ","
+		end	
+		
+		if params[:ad5]
+			@order.alacarte += params[:ad5]
+			@order.alacarte += ","
+		end	
+		if params[:ad6]
+			@order.alacarte += params[:ad6]
+			@order.alacarte += ","
+		end	
 		
 		#add comments and discount
 		@order.comments = params[:comments]
@@ -56,7 +64,12 @@ class OrderController < ApplicationController
 		#redirect for payment and total the price
 		if @order.save
 			@order.total_price
-			redirect_to @order.paypal_url(order_path(@order))
+			if @order.total < 1
+				redirect_to order_complete_path
+			
+			else 
+				redirect_to @order.paypal_url(order_path(@order))
+			end
 		end
 	end
 	def show
@@ -64,6 +77,8 @@ class OrderController < ApplicationController
 	def edit
 	end
 	def new
+	end
+	def complete
 	end
 
 private 

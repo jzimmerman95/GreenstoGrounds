@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   #ordering
   get 'order' => 'order#index'
   
+  get 'order/complete' => 'order#complete'
   #box examples
   get 'examples' => 'examples#index'
 

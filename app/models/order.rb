@@ -1,5 +1,5 @@
 class Order < ActiveRecord::Base
-	#after_create :send_order_create_email
+	after_create :send_order_create_email
 
 	total = 0
 	def paypal_url(return_path)
@@ -7,7 +7,8 @@ class Order < ActiveRecord::Base
 			business: "greenstogrounds@gmail.com",
 			cmd: "_xclick",
 			upload: 1,
-			return: "#{Rails.application.secrets.app_host}#{return_path}",
+			#return: "#{Rails.application.secrets.app_host}#{return_path}",
+			return: "greenstogrounds.herokuapp.com",
 			invoice: id,
 
 			#calculate total price in dollars
@@ -38,16 +39,22 @@ class Order < ActiveRecord::Base
 			self.total += 10
 		end
 
-		if self.alacarte.include? "meats"
-			self.total += 9
-		end
-		if self.alacarte.include? "csnacks"
+		if self.alacarte.include? "Peaches"
 			self.total += 5
 		end
-		if self.alacarte.include? "sweets"
+		if self.alacarte.include? "Doughnuts"
 			self.total += 5
 		end
-		if self.alacarte.include? "extra"
+		if self.alacarte.include? "Granola"
+			self.total += 4
+		end
+		if self.alacarte.include? "Chorizo"
+			self.total += 6
+		end
+		if self.alacarte.include? "Basil"
+			self.total += 1
+		end
+		if self.alacarte.include? "Tomatoes"
 			self.total += 5
 		end
 		#check alacarte items

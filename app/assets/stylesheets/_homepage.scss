@@ -70,12 +70,12 @@ body {
 
 .our-mission-container {
     width: 100%;
-    height: 375px;
+    height: 100%;
     background-color: #ebebeb;
+    padding: 40px 0;
 
     .our-mission-header {
         font-size: 2em;
-        padding-top: 40px;
         padding-left: 70px;
     }
 
@@ -86,17 +86,18 @@ body {
     }
 
     .our-mission-logo {
-        padding-top: 80px;
+        padding-top: 40px;
     }
 }
 
 .box-example-container {
     width: 100%;
-    height: 550px;
+    height: 100%;
+    padding: 40px 0;
 
     .box-example-header {
         font-size: 2em;
-        padding: 40px 0 0 300px;
+        padding-left: 300px;
     }
 
     .box-example-pic {
@@ -131,12 +132,12 @@ body {
 
 .get-started-container {
     width: 100%;
-    height: 350px;
+    height: 100%;
+    padding: 40px 0;
     background-color: #ebebeb;
 
     .get-started-header {
         font-size: 2em;
-        padding-top: 40px;
         padding-left: 70px;
     }
 
@@ -153,7 +154,7 @@ body {
     }
 
     .get-started-logo {
-        padding-top: 70px;
+        padding-top: 30px;
     }
 }
 

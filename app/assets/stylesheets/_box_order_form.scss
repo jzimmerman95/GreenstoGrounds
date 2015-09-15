@@ -15,12 +15,19 @@
 }
 
 .order-form-container {
-	height: 1500px;
+	height: 100%;
 	background-color: #ebebeb;
+
+	.order-form-closed {
+		font-size: 1.5em;
+		text-align: center;
+		padding: 50px 0;
+	}
 
 	.order-form-content-container {
 		width: 85%;
 		margin: 0 auto;
+		padding: 30px 0;
 
 		.order-form-header {
 			font-size: 1.4em;
