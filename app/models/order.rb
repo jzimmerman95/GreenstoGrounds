@@ -1,5 +1,5 @@
 class Order < ActiveRecord::Base
-	#after_create :send_order_create_email
+	after_create :send_order_create_email
 
 	dectotal = 0
 	def paypal_url(return_path)
