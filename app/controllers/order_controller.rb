@@ -64,7 +64,7 @@ class OrderController < ApplicationController
 		#redirect for payment and total the price
 		if @order.save
 			@order.total_price
-			if @order.total < 1
+			if @order.dectotal < 1
 				redirect_to order_complete_path
 			
 			else 

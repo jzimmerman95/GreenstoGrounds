@@ -1,7 +1,7 @@
 class Order < ActiveRecord::Base
-	after_create :send_order_create_email
+	#after_create :send_order_create_email
 
-	total = 0
+	dectotal = 0
 	def paypal_url(return_path)
 		values = {
 			business: "greenstogrounds@gmail.com",
@@ -11,8 +11,8 @@ class Order < ActiveRecord::Base
 			return: "greenstogrounds.herokuapp.com",
 			invoice: id,
 
-			#calculate total price in dollars
-			amount: self.total,
+			#calculate dectotal price in dollars
+			amount: self.dectotal,
 
 			#concatenate order options
 			item_name: "Produce Boxes: #{self.produce}, Snack Boxes: #{self.snack}, A La Carte: #{self.alacarte}",
@@ -26,41 +26,41 @@ class Order < ActiveRecord::Base
 
 
 
-	#tally up total price
+	#tally up dectotal price
 	def total_price()
-		self.total = 0
+		self.dectotal = 0
 
 
 		#check for box item and snack item
 		if self.produce == 1
-			self.total += 10
+			self.dectotal += 10
 		end
 		if self.snack == 1
-			self.total += 10
+			self.dectotal += 10
 		end
 
-		if self.alacarte.include? "Peaches"
-			self.total += 5
+		if self.alacarte.include? "Beef"
+			self.dectotal += 6.5
 		end
-		if self.alacarte.include? "Doughnuts"
-			self.total += 5
+		if self.alacarte.include? "Cider"
+			self.dectotal += 4.5
 		end
 		if self.alacarte.include? "Granola"
-			self.total += 4
+			self.dectotal += 4.5
 		end
-		if self.alacarte.include? "Chorizo"
-			self.total += 6
+		if self.alacarte.include? "Eggs"
+			self.dectotal += 2.5
 		end
-		if self.alacarte.include? "Basil"
-			self.total += 1
+		if self.alacarte.include? "Pears"
+			self.dectotal += 3
 		end
-		if self.alacarte.include? "Tomatoes"
-			self.total += 5
+		if self.alacarte.include? "Grapes"
+			self.dectotal += 3.5
 		end
 		#check alacarte items
 		#check for discount
 		if self.code == "eatyourvegetables"
-			self.total = 0
+			self.dectotal = 0
 		end
 
 
