@@ -51,8 +51,7 @@ body {
 
 .home-background-img {
     position: relative;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
     background-image: url('home.jpg');
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -60,11 +59,15 @@ body {
     background-size: cover;
 
     .g2g-logo {
-        padding: 220px 0px 0px 80px;
+        max-width: 500px;
+        padding: 200px 80px 0 80px;
     }
 
     .arrow {
-        padding: 20px 0px 0px 325px;
+        max-width: 50px;
+        padding-top: 50px;
+        margin: 0 auto;
+        padding-bottom: 40px;
     }
 }
 
@@ -81,12 +84,24 @@ body {
 
     .our-mission-body {
         font-size: 1.2em;
-        padding: 40px 70px 0 70px;
+        padding: 40px 20px 0 70px;
         display: inline-block;
     }
 
     .our-mission-logo {
-        padding-top: 40px;
+        padding-top: 50px;
+        margin-left: 0 !important;
+
+        img {
+            max-width: 180px;
+            display: block;
+            margin: 0 auto;
+            vertical-align: middle;
+        }
+    }
+
+    .mission-br {
+        display: none;
     }
 }
 
@@ -97,25 +112,39 @@ body {
 
     .box-example-header {
         font-size: 2em;
-        padding-left: 300px;
+        text-align: left;
     }
 
     .box-example-pic {
-        padding-top: 100px;
-        padding-left: 100px;
+        width: 100%;
+
+        img {
+            padding-left: 10%;
+            padding-top: 50px;
+            max-width: 80%;
+            margin: 0 auto;
+        }
+
+    }
+
+    .box-example-right {
+        width: 100%;
+        min-width: 400px;
+        margin: 0 auto;
     }
 
     .box-example-bullets {
+        width: 100%;
         padding-top: 50px;
-        padding-left: 50px;
 
         #left-list {
-            padding-right: 100px;
             display: inline-block;
+            padding-right: 10%;
 
             li {
-                font-size: 1.2em;
-                padding: 15px 0px;    
+                font-size: 1.1em;
+                padding: 10px 0px;
+                width: 100%; 
             }
         }
 
@@ -123,8 +152,9 @@ body {
             display: inline-block;
 
             li {
-                font-size: 1.2em;
-                padding: 15px 0px;
+                font-size: 1.1em;
+                padding: 10px 0px;
+                width: 100%;
             }
         }
     }
@@ -144,8 +174,8 @@ body {
     .get-started-body {
         font-size: 1.2em;
         padding-top: 40px;
-        padding-left: 70px;
         max-width: 700px;
+        padding-left: 70px;
     }
 
     .get-started-btn {
@@ -158,5 +188,197 @@ body {
     }
 }
 
+/*****************************************
+            MEDIA QUERIES
+*****************************************/
 
+@media (min-width: 1000px) and (max-width: 1200px) {
+    .our-mission-logo {
+        padding-top: 80px !important;
+        margin-left: 0 !important;
 
+        img {
+            max-width: 180px;
+            display: block;
+            margin: 0 auto;
+            vertical-align: middle;
+        }
+    }
+
+}
+
+@media (min-width: 800px) and (max-width: 1000px) {
+    .our-mission-logo {
+        padding-top: 120px !important;
+        margin-left: 0 !important;
+
+        img {
+            max-width: 180px;
+            display: block;
+            margin: 0 auto;
+            vertical-align: middle;
+        }
+    }
+
+    .box-example-right {
+        margin-left: 0 !important;
+    }
+
+    .box-example-pic {
+        img {
+            padding-left: 10% !important;
+        }
+    }
+
+    .box-example-bullets {
+        padding-top: 20px !important;
+
+        #left-list {
+            padding-right: 5% !important;
+        }
+    }
+
+    .get-started-logo {
+        padding-top: 60px !important;
+        img {
+            max-width: 150px;
+        }
+    }
+
+}
+
+@media (min-width: 600px) and (max-width: 800px) {
+    .navbar {
+
+        ul {
+
+            li {
+                padding: 20px 10px !important;
+                font-size: 0.9em !important;
+            }
+
+            #vertical-bar {
+                display: none;
+            }
+        }
+    }
+
+    .g2g-logo {
+        max-width: 500px;
+        padding: 150px 80px 0 80px !important;
+    }
+
+    .our-mission-logo {
+        padding-top: 120px !important;
+        margin-left: 0 !important;
+
+        img {
+            max-width: 140px;
+            margin: 0 auto;
+            vertical-align: middle;
+        }
+    }
+
+    .our-mission-body {
+        font-size: 1em !important;
+    }
+
+    .box-example-right {
+        padding-left: 40px !important;
+    }
+
+    .box-example-bullets {
+        padding-top: 20px !important;
+
+        #left-list {
+            padding-right: 5% !important;
+        }
+    }
+
+    .box-example-pic {
+        width: 80vw !important; 
+        margin: 0 auto;
+    }
+
+    .get-started-logo {
+        padding-top: 80px !important;
+        img {
+            max-width: 100px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+
+        ul {
+
+            li {
+                padding: 20px 10px !important;
+                font-size: 0.9em !important;
+            }
+
+            #vertical-bar {
+                display: none;
+            }
+        }
+    }
+
+    .our-mission-logo {
+        padding-top: 20px !important;
+        margin-left: 0 !important;
+
+        img {
+            max-width: 120px !important;
+            margin: 0 auto;
+            vertical-align: middle;
+        }
+    }
+
+    .our-mission-header {
+        font-size: 2em;
+        padding-left: 30px !important;
+    }
+
+    .our-mission-body {
+        font-size: 0.9em !important;
+        padding: 40px 20px 0 30px !important;
+    }
+
+    .box-example-right {
+        padding-left: 40px !important;
+    }
+
+    .box-example-bullets {
+        padding-top: 20px !important;
+
+        #left-list {
+            padding-right: 5% !important;
+        }
+    }
+
+    .box-example-pic {
+        width: 100vw !important; 
+
+        img {
+            padding-left: 5% !important;
+            padding-top: 20px !important;
+        }
+    }
+
+    .get-started-logo {
+        display: none;
+    }
+
+    .get-started-header {
+        padding-left: 30px !important;
+    }
+
+    .get-started-body {
+        padding-left: 30px !important;
+    }
+
+    .get-started-btn {
+        padding-left: 30px !important;
+    }
+}
