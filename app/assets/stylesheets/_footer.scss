@@ -4,11 +4,12 @@
 
 .footer-info-section {
 	width: 100%;
-	height: 250px;
+	height: 100%;
+	padding-bottom: 30px;
 	background-color: #262626;
 
 	.footer-row {
-		width: 85%;
+		width: 90%;
 		margin: 0 auto;
 		padding-top: 40px;
 	
@@ -27,6 +28,7 @@
 			display: inline-block;
 			vertical-align: top;
 			width: 29%;
+			padding-bottom: 30px;
 
 			.footer-social-media-logos {
 				img {
@@ -54,8 +56,29 @@
 	padding-top: 20px;
 
 	p {
-		width: 400px;
+		max-width: 400px;
 		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 750px){
+	.footer-contact-col, 
+	.footer-social-media,
+	.footer-subscribe {
+		min-width: 100%;
+	}
+
+	.footer-jubil-section {
+		font-size: 14px;
+		margin: 0 auto;
+		width: 100%;
+
+		p {
+			width: 95%;
+			margin: 0 auto;
+			text-align: center;
+			display: inline-block;
+		}
 	}
 }
 

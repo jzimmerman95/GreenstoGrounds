@@ -1,17 +1,10 @@
 <div class="container">
-	<nav class="navbar">
-		<ul>
-			<li><%= link_to "home", root_path, class: cp(root_path) %></li><span id="vertical-bar">|</span>
-			<li><%= link_to "order", order_path %></li><span id="vertical-bar">|</span>
-			<!-- <li><%= link_to "box examples", examples_path %></li><span id="vertical-bar">|</span> -->
-			<li><%= link_to "faq", faq_path %></li><span id="vertical-bar">|</span>
-			<li><%= link_to "blog", "https://greenstogrounds.wordpress.com/" %></li><span id="vertical-bar">|</span>
-			<li><%= link_to "press", press_path %></li>
-		</ul>
-	</nav>
+	<%= render "layouts/nav_home" %>
 	<div class="home-background-img">
-		<div class="g2g-logo"><%= image_tag("g2glogo.png", width: '550px', height: '400px') %></div>
-		<div class="arrow"><a href="#here"><%= image_tag("arrow.svg", width: '60px', height: '60px') %></a></div>
+		<div class="g2g-logo">
+			<%= image_tag("g2glogo.png", width: '100%', height: '100%') %>
+					<div class="arrow"><a href="#here"><%= image_tag("arrow.svg", width: '100%', height: '100%') %></a></div>
+		</div>
 	</div>
 	<div class="content-container">
 		<div class="our-mission-container row " id="here">
@@ -19,10 +12,10 @@
 				<div class="our-mission-header">our mission</div>
 				<div class="our-mission-body">We are a non-profit, student-run CSA (community supported agriculture) model bringing fresh, local produce to the UVA and Charlottesville community. We strive to create a sustainable relationship between the UVA student body and the Charlottesville agricultural community. We also seek to provide students, faculty, and community members with access to fresh, seasonal, and local produce on a weekly basis. Join us on our quest to eat healthy and live local!</div>
 			</div>
-			<div class="our-mission-logo four columns"><%= image_tag("handshake.png") %></div>
+			<div class="our-mission-logo four columns"><%= image_tag("handshake.png", width: '100%', height: '100%') %></div>
 		</div>
 		<div class="box-example-container row">
-			<div class="box-example-pic six columns"><%= image_tag("boxexample1.jpg", width: '550px', height: '400px') %></div>
+			<div class="box-example-pic six columns"><%= image_tag("boxexample1.jpg", width: '100%', height: '100%') %></div>
 			<div class="box-example-right six columns">
 				<div class="box-example-header">box example</div>
 				<div class="box-example-bullets">
