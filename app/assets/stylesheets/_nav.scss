@@ -46,6 +46,48 @@
     }
 }
 
-@media (max-height: 650px) {
+/*****************************************
+            MEDIA QUERIES
+*****************************************/
 
+@media (min-width: 600px) and (max-width: 800px) {
+    .navigation {
+
+        ul {
+
+            padding-left: 0;
+
+            li {
+                padding: 30px 10px !important;
+                font-size: 0.9em !important;
+            }
+
+            #vertical-bar {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .navigation {
+
+        ul {
+
+            padding-left: 0;
+
+            li {
+                padding: 30px 10px !important;
+                font-size: 0.9em !important;
+            }
+
+            #vertical-bar {
+                display: none;
+            }
+        }
+
+        .logo {
+            padding-right: 20px;
+        }
+    }
 }

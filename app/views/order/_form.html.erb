@@ -14,6 +14,61 @@
 			 <br>
 			 <div class="order-form-header">Select your box:</div>
 			 <br>
+			 <div class="row">
+			 	<div class="four columns">
+					 <input type="checkbox" name="produce_box" value="produce">
+					 	<div class="produce-box-header">produce box $10</div><br>
+					 	<div class="produce-box-body">Green Peas, Salad Mix, Asian Pears</div>
+					 <br>
+				</div>
+				<div class="four columns">
+					 <input type="checkbox" name="snack_box" value="snack">
+					 	<div class="produce-box-header">snack box $10</div><br>
+					 	<div class="produce-box-body">Snow Peas, Carrots, Concord Grapes</div>
+					 <br>
+				</div>
+			 </div>
+			 <div class="order-form-header">Add items a la carte:</div>
+			 <br>
+			 <div class="row">
+			 	<div class="four columns">
+					 <input type="checkbox" name="ad1" value="Beef"><div class="produce-box-header">"Add-On 1" ($6.50)</div><br><div class="produce-box-body">Pasture Ground Beef</div>
+				</div>
+				<div class="four columns">
+					 <input type="checkbox" name="ad2" value="Cider"><div class="produce-box-header">"Add-On 2" ($4.50)</div><br>
+					 <div class="produce-box-body">1/2 Gallon Cider</div>
+				</div>
+				<div class="four columns">
+					 <input type="checkbox" name="ad3" value="Granola"><div class="produce-box-header">"Add-On 3" ($4.50)</div><br><div class="produce-box-body">Savory and Healthy Granola (Shady Lane)</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="four columns">
+					 <input type="checkbox" name="ad4" value="Eggs"><div class="produce-box-header">"Add-On 4" ($2.50)</div><br><div class="produce-box-body">1/2 Dozen Eggs</div>
+				</div>
+				<div class="four columns">
+					 <input type="checkbox" name="ad5" value="Pears"><div class="produce-box-header">"Add-On 5" ($3)</div><br><div class="produce-box-body">3 Asian Pears</div>
+				</div>
+				<div class="four columns">
+					 <input type="checkbox" name="ad6" value="Grapes"><div class="produce-box-header">"Add-On 6" ($3.50)</div><br><div class="produce-box-body">1/2 Quart Concord Grapes</div>
+				</div>
+			 </div>
+			 <div class="alert">***Please be aware that, due to the local, organic nature of our food, some last-minute swaps may be necessary to accommodate unexpected changes in availability</div>
+			 <div class="order-form-header">Comments:</div>
+			 <br>
+			 <div>please specify any dietary restrictions so we may accomodate you</div><br>
+			 <textarea></textarea>
+			 <br>
+			 <div class="alert">If you are ordering a box using a discount code, please select either the snack or produce option only. Add-on options are unavailable via discount code at this time.</div>
+			 <div class="order-form-header">Discount code:</div>
+			 <br>
+			 <input type="text" name="discount_code">
+			 <div class="order-form-header">Questions?</div>
+			 <br>
+			 <div class="order-form-questions">If you have any questions about your order, please feel free to contact us at <strong><%= mail_to "greenstogrounds@gmail.com", "greenstogrounds@gmail.com"%></strong></div>
+			 <br><br>
+			 <div class="alert">***Please note: When you hit the submit order button, you will be taken to PayPal. If you are experiencing problems with PayPal you may pay through Venmo (@greenstogrounds). If we do not receive a payment on either of those platforms by Wednesday at noon your order will not be complete and you will not receive your box.</div>
+			 <br>
 			 <textarea placeholder="message"></textarea>
 			 <input type="image" value="Submit" src="/assets/submit.png">
 			</form>

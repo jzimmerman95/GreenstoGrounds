@@ -9,7 +9,7 @@
 	background-color: #262626;
 
 	.footer-row {
-		width: 85%;
+		width: 90%;
 		margin: 0 auto;
 		padding-top: 40px;
 	
@@ -17,7 +17,6 @@
 			color: white;
 			display: inline-block;
 			width: 40%;
-			min-width: 350px;
 
 			p {
 				width: 80%;
@@ -29,7 +28,6 @@
 			display: inline-block;
 			vertical-align: top;
 			width: 29%;
-			min-width: 350px;
 			padding-bottom: 30px;
 
 			.footer-social-media-logos {
@@ -45,7 +43,6 @@
 			display: inline-block;
 			vertical-align: top;
 			width: 29%;
-			min-width: 350px;
 		}	
 
 	}
@@ -59,8 +56,29 @@
 	padding-top: 20px;
 
 	p {
-		width: 400px;
+		max-width: 400px;
 		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 750px){
+	.footer-contact-col, 
+	.footer-social-media,
+	.footer-subscribe {
+		min-width: 100%;
+	}
+
+	.footer-jubil-section {
+		font-size: 14px;
+		margin: 0 auto;
+		width: 100%;
+
+		p {
+			width: 95%;
+			margin: 0 auto;
+			text-align: center;
+			display: inline-block;
+		}
 	}
 }
 
