@@ -2,7 +2,7 @@ class OrderController < ApplicationController
 	skip_before_filter  :verify_authenticity_token
 	before_action :set_order, only: [:show, :edit, :update, :destroy]
 	def index
-		@order = Order.new()
+		
 	end
 	def create
 		@order = Order.new()
